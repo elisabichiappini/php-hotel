@@ -54,24 +54,31 @@
         <h1>Hotels</h1>
     </header>
     <div class="container">
+        
         <table class="table">
-            <thead>
-                <th>
-                    <?php 
-                    foreach($hotels as $index => $hotel) {
-                        echo $index;
-                    ?>
-                </th>
-            </thead>
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">name</th>
+                <th scope="col">description</th>
+                <th scope="col">parking</th>
+                <th scope="col">vote</th>
+                <th scope="col">distance_to_center</th>
+            </tr>
+        </thead>
             <tbody>
-                <?php
-                foreach($hotel as $key => $value) {
-                    echo "<td>$key</td>";
-                    echo "<td><strong>$value</strong></td>";
-                }
-            };?>
+                <?php 
+                    foreach($hotels as $index => $hotel) {
+                ?>
+            <tr>
+                <?php foreach($hotel as $key => $value) {
+                    echo "<td>$value</td>";
+                    echo "<td>$index</td>";
+                    echo "<td>$value</td>";  
+                    }
+                };?>
+                </tr>
             </tbody>
-            <!--intestazione tabella -->
         </table>
     </div>
 </body>
