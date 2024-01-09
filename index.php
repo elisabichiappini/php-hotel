@@ -49,12 +49,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!--file CDN Bootstrap-->
 </head>
-<body class="bg-dark">
-    <header class="container text-center p-5">
+<body class="container bg-dark text-center">
+    <!--intestazione-->
+    <header class="p-5">
         <h1 class="text-white">Hotels</h1>
     </header>
-    <main class="container text-center">
+    <!--/intestazione-->
+    <!--corpo-->
+    <main>
+        <!--dati stampati in tabella-->
         <table class="table">
+            <!--prima riga di tabella intestazione-->
             <thead>
                 <tr>
                     <th scope="col">Name</th>
@@ -64,16 +69,22 @@
                     <th scope="col">Distance_to_center</th>
                 </tr>
             </thead>
+            <!--/prima riga di tabella intestazione-->
+            <!--corpo dove popolo i dati-->
             <tbody>
                 <?php foreach($hotels as $hotel) {
-                    echo"<tr>";
+                    echo "<tr>";
                     foreach($hotel as $key => $value) {
                         echo "<td>$value</td>";
                     }
-                };?>
+                };
+                ?>
                 </tr>
             </tbody>
+            <!--/corpo dove popolo i dati-->
         </table>
+        <!--/dati stampati in tabella-->
     </main>
+    <!--/corpo-->
 </body>
 </html>
