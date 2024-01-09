@@ -1,7 +1,6 @@
 <?php
-
+    //array di hotels
     $hotels = [
-
         [
             'name' => 'Hotel Belvedere',
             'description' => 'Hotel Belvedere Descrizione',
@@ -37,7 +36,6 @@
             'vote' => 2,
             'distance_to_center' => 50
         ],
-
     ];
 ?>
 
@@ -47,18 +45,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP hotel</title>
+    <!--file CDN Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--file CDN Bootstrap-->
 </head>
 <body>
     <header>
         <h1>Hotels</h1>
     </header>
-    <div>
-        <?php foreach($hotels as $hotel) { 
+    <div class="container">
+        <?php foreach($hotels as $index => $hotel) {
+            echo $index;
             foreach($hotel as $key => $value){
                 echo "<br>";
-                echo "$key:"." $value";
-            };            
-        }
+                echo "$key: $value";
+            };    
+            echo "<hr>";        
+            };
         ?>
     </div>
 </body>
