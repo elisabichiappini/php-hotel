@@ -49,37 +49,31 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!--file CDN Bootstrap-->
 </head>
-<body>
-    <header>
-        <h1>Hotels</h1>
+<body class="bg-dark">
+    <header class="container text-center p-5">
+        <h1 class="text-white">Hotels</h1>
     </header>
-    <div class="container">
-        
+    <main class="container text-center">
         <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">name</th>
-                <th scope="col">description</th>
-                <th scope="col">parking</th>
-                <th scope="col">vote</th>
-                <th scope="col">distance_to_center</th>
-            </tr>
-        </thead>
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Parking</th>
+                    <th scope="col">Vote</th>
+                    <th scope="col">Distance_to_center</th>
+                </tr>
+            </thead>
             <tbody>
-                <?php 
-                    foreach($hotels as $index => $hotel) {
-                ?>
-            <tr>
-                <?php foreach($hotel as $key => $value) {
-                    echo "<td>$value</td>";
-                    echo "<td>$index</td>";
-                    echo "<td>$value</td>";  
+                <?php foreach($hotels as $hotel) {
+                    echo"<tr>";
+                    foreach($hotel as $key => $value) {
+                        echo "<td>$value</td>";
                     }
                 };?>
                 </tr>
             </tbody>
         </table>
-    </div>
+    </main>
 </body>
 </html>
