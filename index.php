@@ -57,6 +57,27 @@
     <!--/intestazione-->
     <!--corpo-->
     <main>
+        <!--form-->
+        <form class="row g-3 pb-3 align-items-center d-flex justify-content-center" action="#" method="GET">
+            <div class="col-4">
+                <label class="visually-hidden" for="voto">Filtro1</label>
+                <div class="input-group">
+                <div class="input-group-text">Filtro Hotel</div>
+                <input type="text" class="form-control" id="voto" placeholder="Voto da 1 a 5">
+                </div>
+            </div>
+            <div class="col-auto">
+                <label class="visually-hidden" for="parking">Filtro2</label>
+                <select class="form-select" id="parking">
+                    <option selected>Parking car</option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                </select>
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
         <!--dati stampati in tabella-->
         <table class="table">
             <!--prima riga di tabella intestazione-->
