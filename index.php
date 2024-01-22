@@ -94,8 +94,8 @@
                     <label class="visually-hidden" for="parking">Filtro2</label>
                     <select class="form-select" id="parking" name="parking">
                         <option value="">Parking Filter</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
+                        <option value="yes" <?php if($parking === true):?> selected <?php endif;?>>Yes</option>
+                        <option value="no" <?php if($parking === false):?> selected <?php endif;?>>No</option>
                     </select>
                 </div>
                 <!--/filtro select parcheggio-->
@@ -104,14 +104,14 @@
                     <label for="voto" class="visually-hidden"></label>
                     <select class="form-select" id="voto" name="vote">
                         <option selected value="">Vote All</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
+                        <option value="1" <?php if($vote === 1):?> selected <?php endif;?>>1</option>
+                        <option value="2" <?php if($vote === 2):?> selected <?php endif;?>>2</option>
+                        <option value="3" <?php if($vote === 3):?> selected <?php endif;?>>3</option>
+                        <option value="4" <?php if($vote === 4):?> selected <?php endif;?>>4</option>
+                        <option value="5" <?php if($vote === 5):?> selected <?php endif;?>>5</option>
                         <!-- alternative option vote
                         <?php for($i = 1; $i <=5; $i++): ?>
-                            <option value="<?php echo $i;?>"><?php echo $i;?></option>
+                            <option value="<?php echo $i;?>"<?php if($vote === $i):?> selected <?php endif;?>>Voto<?php echo $i;?></option>
                         <?php endfor; ?> -->
                         <!-- /alternative option vote-->
                     </select>
@@ -140,8 +140,8 @@
             <!--creazione di records per gli hotel in tabella-->
             <?php foreach ($filters_hotel as $hotel) :?>
                 <tr>
-                    <td><?php echo $hotel['name'];?></th>
-                    <td><?php echo $hotel['description'] ;?></td>
+                    <td><?php echo $hotel['name']; ?></th>
+                    <td><?php echo $hotel['description']; ?></td>
                     <td><?php echo $hotel['parking'];?></td>
                     <td><?php echo $hotel['vote']; ?></td>
                     <td><?php echo $hotel ['distance_to_center']; ?>km</td>
