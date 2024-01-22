@@ -93,7 +93,7 @@
                 <div class="col-auto">
                     <label class="visually-hidden" for="parking">Filtro2</label>
                     <select class="form-select" id="parking" name="parking">
-                        <option value="">Parking Filter</option>
+                        <option selected value="">Parking Filter</option>
                         <option value="yes" <?php if($parking === true):?> selected <?php endif;?>>Yes</option>
                         <option value="no" <?php if($parking === false):?> selected <?php endif;?>>No</option>
                     </select>
