@@ -53,6 +53,19 @@
         }
         $filters_hotel = $temp_hotels;
     }
+
+    //filter con voto
+    if(!empty($_GET['vote'])){
+        $vote = $_GET['vote'] ? intval($_GET['vote']) : false;
+   
+        $temp_hotels = [];
+        foreach($filters_hotel as $hotel) {
+            if($hotel['vote'] >= $vote) {
+                $temp_hotels[] = $hotel;
+            }
+        }
+        $filters_hotel = $temp_hotels;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -88,8 +101,8 @@
                 <!--/filtro select parcheggio-->
                 <!--filtro select voto-->
                 <div class="col-auto">
-                    <label for="voto"  class="visually-hidden"></label>
-                    <select class="form-select" id="voto" name="voto">
+                    <label for="voto" class="visually-hidden"></label>
+                    <select class="form-select" id="voto" name="vote">
                         <option selected value="">Vote All</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
